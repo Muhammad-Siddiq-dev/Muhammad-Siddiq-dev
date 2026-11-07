@@ -71,7 +71,7 @@ No. Nobody can. Printers are not software, they are a curse.
 ### 🐍 Proof I touch keyboards
 
 <p align="center">
-  <img height="170" src="https://streak-stats.demolab.com?user=Muhammad-Siddiq-dev&theme=tokyonight&hide_border=true" />
+  <img height="170" src="https://streak-stats.demolab.com?user=Muhammad-Siddiq-dev&theme=tokyonight&hide_border=true&v=2" />
 </p>
 
 <p align="center">
