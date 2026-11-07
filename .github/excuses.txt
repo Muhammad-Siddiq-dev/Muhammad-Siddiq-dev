@@ -1,0 +1,30 @@
+It worked on my machine.
+That's not a bug, it's an undocumented feature.
+The tests passed. Locally. Once.
+It must be a caching issue.
+It's DNS. It's always DNS.
+I didn't touch that file. Git blame is lying.
+That code was written by past me. Never met them.
+It's a race condition. It'll lose eventually.
+Works fine as long as you don't click that button.
+The requirements changed. Probably.
+Must be a timezone thing.
+I'm not stuck, I'm researching.
+It's not slow, it's thoughtfully paced.
+The logs say nothing. Which is suspicious.
+Mercury is in retrograde. Check the deploy calendar.
+Clearly a hardware issue.
+I was told it was a quick fix.
+It's a known issue. Known by me. Just now.
+Have you tried turning it off and on again?
+That's a backend problem. (Me, wearing my frontend hat.)
+The intern did it. We don't have an intern.
+It's eventual consistency. Give it a minute. Or a week.
+Prod is just a very expensive staging environment.
+I'll fix it next sprint. Which sprint? Yes.
+Stack Overflow said this would work.
+Cosmic rays flipped a bit.
+The semicolon started it.
+It passed code review. Nobody read it, but it passed.
+It's not broken, it's in a creative state.
+I can't reproduce it, so technically it doesn't exist.

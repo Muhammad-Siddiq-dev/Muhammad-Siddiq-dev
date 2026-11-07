@@ -1,0 +1,45 @@
+# Rotates the "Excuse of the day" quote in README.md once a day.
+# The excuses live in .github/excuses.txt (one per line), so the list can be
+# edited without touching this workflow. The quote sits between the
+# EXCUSE:START and EXCUSE:END markers in the README; nothing else is changed.
+name: Rotate excuse of the day
+
+on:
+  schedule:
+    - cron: "5 0 * * *"   # daily, just after the snake run
+  workflow_dispatch:       # lets you rotate it manually
+
+permissions:
+  contents: write
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write today's excuse into the README
+        run: |
+          set -euo pipefail
+          # Day-of-year picks the line: the same excuse all day, a new one tomorrow.
+          # 10# forces base 10, because %j is zero-padded (e.g. "089" is not octal).
+          excuse_count=$(grep -c . .github/excuses.txt)
+          line_number=$(( 10#$(date -u +%j) % excuse_count + 1 ))
+          todays_excuse=$(grep . .github/excuses.txt | sed -n "${line_number}p")
+          export todays_excuse
+          # Read from the environment so quotes or slashes in an excuse can't break the substitution.
+          perl -0pi -e 's/(<!-- EXCUSE:START -->).*?(<!-- EXCUSE:END -->)/$1\n> "$ENV{todays_excuse}"\n$2/s' README.md
+          echo "Picked excuse ${line_number} of ${excuse_count}"
+
+      - name: Commit only when the excuse changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet README.md; then
+            echo "Excuse unchanged, nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Rotate excuse of the day"
+          git push

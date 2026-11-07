@@ -68,11 +68,17 @@ No. Nobody can. Printers are not software, they are a curse.
 
 ---
 
-### 🐍 Proof I touch keyboards
+### 🎲 Excuse of the day
 
-<p align="center">
-  <img height="170" src="https://streak-stats.demolab.com?user=Muhammad-Siddiq-dev&theme=tokyonight&hide_border=true&v=2" />
-</p>
+<!-- EXCUSE:START -->
+> "It worked on my machine."
+<!-- EXCUSE:END -->
+
+<sub>A fresh one every day, picked by a robot so I can't be blamed. Use responsibly.</sub>
+
+---
+
+### 🐍 My commits, being eaten alive
 
 <p align="center">
   <picture>
