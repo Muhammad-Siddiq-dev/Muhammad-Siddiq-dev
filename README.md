@@ -1,5 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:3b82f6,100:8b5cf6&height=200&section=header&text=Muhammad%20Siddiq&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Professional%20Bug%20Relocator&descAlignY=58&descSize=18&animation=fadeIn" width="100%" />
-
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1200&color=3B82F6&center=true&vCenter=true&width=700&lines=It+works+on+my+machine.+Ship+my+machine.;I+don%27t+have+bugs.+I+have+surprise+features.;Turning+coffee+into+merge+conflicts+since+day+one.;Currently+mid-refactor.+Do+not+make+eye+contact.;git+push+--force+%28with+confidence%2C+not+permission%29" alt="Typing SVG" />
 </p>
@@ -44,7 +42,6 @@
 ### 📜 Changelog (of me)
 
 ```text
-v4.0.4  Personality not found. Rolled back to sarcasm.
 v3.2.1  Fixed one bug. Created two. Called it "learning".
 v2.0.0  BREAKING: stopped saying "it's a quick fix".
 v1.0.0  Initial release. Shipped without tests. Still in production.
@@ -62,9 +59,6 @@ v1.0.0  Initial release. Shipped without tests. Still in production.
 ---
 
 ### ❓ FAQ
-
-**What do you work on?**
-I'd tell you, but then I'd have to schedule a meeting about it. (NDA. Sorry.)
 
 **Is it a quick fix?**
 It is never a quick fix.
@@ -89,7 +83,5 @@ No. Nobody can. Printers are not software, they are a curse.
   <br/>
   <sub>This snake eats my commits every day. Still more consistent than my sleep schedule.</sub>
 </p>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8b5cf6,50:3b82f6,100:0f172a&height=120&section=footer" width="100%" />
 
 <p align="center"><sub>No production servers were harmed in the making of this README. Several were mildly inconvenienced.</sub></p>
