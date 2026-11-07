@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/dev-at-work.svg" width="100%" alt="Animated developer in headphones typing on a laptop: the terminal force-pushes, the deploy bar is stuck at 99%, coffee steams and a bug labelled it's a feature crawls across the desk" />
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1200&color=3B82F6&center=true&vCenter=true&width=700&lines=It+works+on+my+machine.+Ship+my+machine.;I+don%27t+have+bugs.+I+have+surprise+features.;Turning+coffee+into+merge+conflicts+since+day+one.;Currently+mid-refactor.+Do+not+make+eye+contact.;git+push+--force+%28with+confidence%2C+not+permission%29" alt="Typing SVG" />
 </p>
 

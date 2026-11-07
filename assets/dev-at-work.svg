@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 360" width="840" height="360" role="img" aria-labelledby="title desc">
+  <title id="title">Developer at work</title>
+  <desc id="desc">An animated developer in headphones typing on a laptop while a terminal force-pushes commits, a deploy bar sticks at 99 percent, coffee steams and a bug labelled "it's a feature" crawls across the desk.</desc>
+
+  <style>
+    .sans { font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .fill-box { transform-box: fill-box; transform-origin: center; }
+
+    /* Head bobs to the beat in the headphones. */
+    .head { animation: bob 1.2s ease-in-out infinite; }
+    @keyframes bob { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(3px) rotate(-2deg); } }
+
+    /* Eyes blink every few seconds. */
+    .eye { animation: blink 4s infinite; }
+    @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+
+    /* Screen light flickers on the glasses and face. */
+    .glare { animation: flicker 2.6s infinite; }
+    @keyframes flicker { 0%, 100% { opacity: 0.25; } 40% { opacity: 0.55; } 60% { opacity: 0.3; } 80% { opacity: 0.6; } }
+    .glow { animation: glow 3s ease-in-out infinite; }
+    @keyframes glow { 0%, 100% { opacity: 0.55; } 50% { opacity: 0.9; } }
+
+    /* Hands type in alternation. */
+    .hand-left { animation: type 0.3s ease-in-out infinite alternate; }
+    .hand-right { animation: type 0.3s ease-in-out infinite alternate-reverse; }
+    @keyframes type { from { transform: translateY(0); } to { transform: translateY(-5px); } }
+
+    /* Laptop logo pulses. */
+    .logo { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+    /* Coffee steam rises and fades, staggered. */
+    .steam { animation: steam 2.4s ease-out infinite; opacity: 0; }
+    .steam-2 { animation-delay: 0.8s; }
+    .steam-3 { animation-delay: 1.6s; }
+    @keyframes steam { 0% { transform: translateY(6px); opacity: 0; } 30% { opacity: 0.8; } 100% { transform: translateY(-18px); opacity: 0; } }
+
+    /* Code glyphs drift up from the laptop. */
+    .glyph { animation: drift 6s linear infinite; opacity: 0; }
+    .glyph-2 { animation-delay: 1.5s; }
+    .glyph-3 { animation-delay: 3s; }
+    .glyph-4 { animation-delay: 4.5s; }
+    @keyframes drift { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 0.9; } 100% { transform: translateY(-130px); opacity: 0; } }
+
+    /* Background stars twinkle. */
+    .star { animation: twinkle 3s ease-in-out infinite; }
+    .star-2 { animation-delay: 1s; }
+    .star-3 { animation-delay: 2s; }
+    @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+
+    /* Speech bubble cycles through three thoughts. */
+    .thought { opacity: 0; animation: thought 9s infinite; }
+    .thought-2 { animation-delay: 3s; }
+    .thought-3 { animation-delay: 6s; }
+    @keyframes thought { 0% { opacity: 0; } 4%, 30% { opacity: 1; } 34%, 100% { opacity: 0; } }
+
+    /* Terminal lines "type" in: a cover slides right in steps, then everything clears and loops. */
+    .cover { animation-duration: 14s; animation-iteration-count: infinite; }
+    .cover-1 { animation-name: reveal-1; }
+    .cover-2 { animation-name: reveal-2; }
+    .cover-3 { animation-name: reveal-3; }
+    .cover-4 { animation-name: reveal-4; }
+    .cover-5 { animation-name: reveal-5; }
+    .cover-6 { animation-name: reveal-6; }
+    @keyframes reveal-1 { 0%, 4% { transform: translateX(0); animation-timing-function: steps(22, end); } 14%, 95% { transform: translateX(364px); } 96%, 100% { transform: translateX(0); } }
+    @keyframes reveal-2 { 0%, 18% { transform: translateX(0); animation-timing-function: steps(30, end); } 30%, 95% { transform: translateX(364px); } 96%, 100% { transform: translateX(0); } }
+    @keyframes reveal-3 { 0%, 34% { transform: translateX(0); animation-timing-function: steps(30, end); } 46%, 95% { transform: translateX(364px); } 96%, 100% { transform: translateX(0); } }
+    @keyframes reveal-4 { 0%, 52% { transform: translateX(0); animation-timing-function: steps(18, end); } 60%, 95% { transform: translateX(364px); } 96%, 100% { transform: translateX(0); } }
+    @keyframes reveal-5 { 0%, 64% { transform: translateX(0); animation-timing-function: steps(22, end); } 72%, 95% { transform: translateX(364px); } 96%, 100% { transform: translateX(0); } }
+    @keyframes reveal-6 { 0%, 76% { transform: translateX(0); animation-timing-function: steps(2, end); } 78%, 95% { transform: translateX(364px); } 96%, 100% { transform: translateX(0); } }
+    .cursor { animation: cursor 1s steps(1, end) infinite; }
+    @keyframes cursor { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+    /* Deploy bar races to 99% and then stays there forever. */
+    .deploy { transform-box: fill-box; transform-origin: left center; animation: deploy 14s infinite; }
+    @keyframes deploy { 0% { transform: scaleX(0); } 20% { transform: scaleX(0.7); } 35%, 95% { transform: scaleX(0.99); } 100% { transform: scaleX(0); } }
+
+    /* The bug crawls across the desk; its legs scuttle. */
+    .bug { animation: crawl 16s linear infinite; }
+    @keyframes crawl { from { transform: translateX(-60px); } to { transform: translateX(900px); } }
+    .bug-body { animation: scuttle 0.25s ease-in-out infinite alternate; }
+    @keyframes scuttle { from { transform: translateY(0); } to { transform: translateY(-1.5px); } }
+
+    /* Respect visitors who turn animations off: show the finished scene instead. */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .cover { display: none; }
+      .thought-2, .thought-3 { display: none; }
+      .thought-1 { opacity: 1; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a" />
+      <stop offset="1" stop-color="#1e1b4b" />
+    </linearGradient>
+    <radialGradient id="screen-light" cx="0.5" cy="0.6" r="0.5">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="deploy-fill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b82f6" />
+      <stop offset="1" stop-color="#8b5cf6" />
+    </linearGradient>
+    <clipPath id="card"><rect width="840" height="360" rx="20" /></clipPath>
+    <clipPath id="terminal-body"><rect x="440" y="64" width="364" height="162" /></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="840" height="360" fill="url(#sky)" />
+
+    <!-- Stars -->
+    <circle class="star" cx="40" cy="40" r="2" fill="#e2e8f0" />
+    <circle class="star star-2" cx="96" cy="112" r="1.5" fill="#e2e8f0" />
+    <circle class="star star-3" cx="30" cy="190" r="2" fill="#e2e8f0" />
+    <circle class="star star-2" cx="372" cy="36" r="1.5" fill="#e2e8f0" />
+    <circle class="star" cx="398" cy="140" r="2" fill="#e2e8f0" />
+    <circle class="star star-3" cx="70" cy="250" r="1.5" fill="#e2e8f0" />
+
+    <!-- Speech bubble with rotating thoughts -->
+    <rect x="125" y="28" width="210" height="40" rx="20" fill="#f8fafc" />
+    <polygon points="206,66 226,66 216,86" fill="#f8fafc" />
+    <text class="sans thought thought-1" x="230" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">it works?!</text>
+    <text class="sans thought thought-2" x="230" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">wait… why does it work</text>
+    <text class="sans thought thought-3" x="230" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">don't. touch. anything.</text>
+
+    <!-- Screen light behind the developer -->
+    <ellipse class="glow" cx="230" cy="200" rx="130" ry="100" fill="url(#screen-light)" />
+
+    <!-- Developer -->
+    <path d="M150 304 Q152 224 230 208 Q308 224 310 304 Z" fill="#8b5cf6" />
+    <path d="M220 216 L218 242 M240 216 L242 242" stroke="#e9d5ff" stroke-width="2.5" stroke-linecap="round" />
+    <rect x="222" y="190" width="16" height="18" fill="#c68a52" />
+
+    <g class="head fill-box">
+      <circle cx="230" cy="160" r="36" fill="#d9a066" />
+      <path d="M196 152 Q198 118 232 117 Q264 119 266 150 Q252 136 238 141 Q226 130 214 143 Q204 141 196 152 Z" fill="#111827" />
+      <rect x="205" y="152" width="20" height="15" rx="4" fill="#3b82f6" fill-opacity="0.25" stroke="#e2e8f0" stroke-width="2.5" />
+      <rect x="235" y="152" width="20" height="15" rx="4" fill="#3b82f6" fill-opacity="0.25" stroke="#e2e8f0" stroke-width="2.5" />
+      <line x1="225" y1="158" x2="235" y2="158" stroke="#e2e8f0" stroke-width="2.5" />
+      <ellipse class="eye fill-box" cx="215" cy="160" rx="2.6" ry="2.6" fill="#0f172a" />
+      <ellipse class="eye fill-box" cx="245" cy="160" rx="2.6" ry="2.6" fill="#0f172a" />
+      <rect class="glare" x="207" y="154" width="16" height="11" rx="3" fill="#93c5fd" />
+      <rect class="glare" x="237" y="154" width="16" height="11" rx="3" fill="#93c5fd" />
+      <path d="M222 180 Q230 186 238 180" stroke="#7c2d12" stroke-width="2" fill="none" stroke-linecap="round" />
+      <path d="M190 160 A42 42 0 0 1 270 160" stroke="#3b82f6" stroke-width="7" fill="none" stroke-linecap="round" />
+      <rect x="182" y="148" width="15" height="28" rx="6" fill="#3b82f6" />
+      <rect x="263" y="148" width="15" height="28" rx="6" fill="#3b82f6" />
+    </g>
+
+    <!-- Laptop (lid faces us) -->
+    <rect x="150" y="212" width="160" height="92" rx="8" fill="#334155" stroke="#475569" stroke-width="2" />
+    <text class="mono logo" x="230" y="270" text-anchor="middle" font-size="26" font-weight="700" fill="#60a5fa">&lt;/&gt;</text>
+    <g transform="rotate(-8 204 231)">
+      <rect x="160" y="222" width="92" height="18" rx="3" fill="#fbbf24" />
+      <text class="sans" x="206" y="234" text-anchor="middle" font-size="8" font-weight="700" fill="#1f2937">works on my machine</text>
+    </g>
+    <rect x="135" y="302" width="190" height="9" rx="4" fill="#64748b" />
+    <ellipse class="hand-left" cx="143" cy="298" rx="11" ry="8" fill="#d9a066" />
+    <ellipse class="hand-right" cx="317" cy="298" rx="11" ry="8" fill="#d9a066" />
+
+    <!-- Code glyphs drifting up -->
+    <text class="mono glyph" x="58" y="300" font-size="18" fill="#60a5fa">{ }</text>
+    <text class="mono glyph glyph-2" x="100" y="300" font-size="16" fill="#a78bfa">&lt;/&gt;</text>
+    <text class="mono glyph glyph-3" x="80" y="300" font-size="18" fill="#60a5fa">;</text>
+    <text class="mono glyph glyph-4" x="392" y="300" font-size="14" fill="#a78bfa">01</text>
+
+    <!-- Desk -->
+    <rect x="0" y="310" width="840" height="50" fill="#1e293b" />
+    <rect x="0" y="310" width="840" height="3" fill="#334155" />
+
+    <!-- Coffee -->
+    <path class="steam" d="M358 268 q-6 -8 0 -16 q6 -8 0 -16" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path class="steam steam-2" d="M366 268 q-6 -8 0 -16 q6 -8 0 -16" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path class="steam steam-3" d="M374 268 q-6 -8 0 -16 q6 -8 0 -16" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <rect x="350" y="276" width="30" height="34" rx="4" fill="#e2e8f0" />
+    <path d="M380 284 q12 0 12 10 q0 10 -12 10" stroke="#e2e8f0" stroke-width="4" fill="none" />
+    <ellipse cx="365" cy="277" rx="15" ry="3" fill="#78350f" />
+
+    <!-- Terminal -->
+    <rect x="430" y="28" width="384" height="206" rx="12" fill="#0b1220" stroke="#334155" stroke-width="2" />
+    <path d="M431 56 V40 a11 11 0 0 1 11 -11 H802 a11 11 0 0 1 11 11 V56 Z" fill="#1e293b" />
+    <circle cx="450" cy="42" r="5" fill="#ef4444" />
+    <circle cx="468" cy="42" r="5" fill="#f59e0b" />
+    <circle cx="486" cy="42" r="5" fill="#22c55e" />
+    <text class="mono" x="630" y="46" text-anchor="middle" font-size="12" fill="#94a3b8">~/definitely-not-prod</text>
+
+    <g clip-path="url(#terminal-body)" class="mono" font-size="14">
+      <text x="448" y="88"><tspan fill="#22c55e">$ </tspan><tspan fill="#e2e8f0">git commit -m "fix"</tspan></text>
+      <text x="448" y="114"><tspan fill="#22c55e">$ </tspan><tspan fill="#e2e8f0">git commit -m "fix for real"</tspan></text>
+      <text x="448" y="140"><tspan fill="#22c55e">$ </tspan><tspan fill="#e2e8f0">git commit -m "please work"</tspan></text>
+      <text x="448" y="166"><tspan fill="#22c55e">$ </tspan><tspan fill="#e2e8f0">git push </tspan><tspan fill="#f87171">--force</tspan></text>
+      <text x="448" y="192" fill="#22c55e">✔ deployed. probably.</text>
+      <text x="448" y="218" fill="#22c55e">$ </text>
+      <rect class="cursor" x="466" y="205" width="9" height="16" fill="#e2e8f0" />
+
+      <rect class="cover cover-1" x="440" y="71" width="364" height="24" fill="#0b1220" />
+      <rect class="cover cover-2" x="440" y="97" width="364" height="24" fill="#0b1220" />
+      <rect class="cover cover-3" x="440" y="123" width="364" height="24" fill="#0b1220" />
+      <rect class="cover cover-4" x="440" y="149" width="364" height="24" fill="#0b1220" />
+      <rect class="cover cover-5" x="440" y="175" width="364" height="24" fill="#0b1220" />
+      <rect class="cover cover-6" x="440" y="201" width="364" height="25" fill="#0b1220" />
+    </g>
+
+    <!-- Deploy bar -->
+    <rect x="430" y="246" width="384" height="50" rx="10" fill="#111827" stroke="#334155" stroke-width="2" />
+    <text class="sans" x="446" y="267" font-size="12" fill="#cbd5e1">deploying to prod…</text>
+    <text class="sans" x="798" y="267" text-anchor="end" font-size="11" fill="#fbbf24">ETA: 2 min (since Tuesday)</text>
+    <rect x="446" y="277" width="352" height="8" rx="4" fill="#1e293b" />
+    <rect class="deploy" x="446" y="277" width="352" height="8" rx="4" fill="url(#deploy-fill)" />
+
+    <!-- The bug that is definitely a feature -->
+    <g class="bug">
+      <text class="sans" x="0" y="326" text-anchor="middle" font-size="11" fill="#94a3b8">it's a feature</text>
+      <g class="bug-body">
+        <path d="M-6 336 l-6 -4 M-6 340 l-7 0 M-6 344 l-6 4 M6 336 l6 -4 M6 340 l7 0 M6 344 l6 4" stroke="#fca5a5" stroke-width="1.5" stroke-linecap="round" />
+        <ellipse cx="0" cy="340" rx="9" ry="6.5" fill="#ef4444" />
+        <line x1="0" y1="334" x2="0" y2="346" stroke="#7f1d1d" stroke-width="1.2" />
+        <circle cx="11" cy="340" r="4" fill="#b91c1c" />
+      </g>
+    </g>
+  </g>
+</svg>
