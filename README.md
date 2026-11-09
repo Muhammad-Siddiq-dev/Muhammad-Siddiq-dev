@@ -75,7 +75,7 @@ No. Nobody can. Printers are not software, they are a curse.
 ### 🎲 Excuse of the day
 
 <!-- EXCUSE:START -->
-> "It's not slow, it's thoughtfully paced."
+> "The logs say nothing. Which is suspicious."
 <!-- EXCUSE:END -->
 
 <sub>A fresh one every day, picked by a robot so I can't be blamed. Use responsibly.</sub>
