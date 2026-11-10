@@ -75,7 +75,7 @@ No. Nobody can. Printers are not software, they are a curse.
 ### 🎲 Excuse of the day
 
 <!-- EXCUSE:START -->
-> "The logs say nothing. Which is suspicious."
+> "Mercury is in retrograde. Check the deploy calendar."
 <!-- EXCUSE:END -->
 
 <sub>A fresh one every day, picked by a robot so I can't be blamed. Use responsibly.</sub>
