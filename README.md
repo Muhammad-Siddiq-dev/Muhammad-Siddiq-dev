@@ -75,7 +75,7 @@ No. Nobody can. Printers are not software, they are a curse.
 ### 🎲 Excuse of the day
 
 <!-- EXCUSE:START -->
-> "Have you tried turning it off and on again?"
+> "That's a backend problem. (Me, wearing my frontend hat.)"
 <!-- EXCUSE:END -->
 
 <sub>A fresh one every day, picked by a robot so I can't be blamed. Use responsibly.</sub>
