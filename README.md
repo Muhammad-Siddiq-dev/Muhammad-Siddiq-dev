@@ -75,7 +75,7 @@ No. Nobody can. Printers are not software, they are a curse.
 ### 🎲 Excuse of the day
 
 <!-- EXCUSE:START -->
-> "It's eventual consistency. Give it a minute. Or a week."
+> "Prod is just a very expensive staging environment."
 <!-- EXCUSE:END -->
 
 <sub>A fresh one every day, picked by a robot so I can't be blamed. Use responsibly.</sub>
