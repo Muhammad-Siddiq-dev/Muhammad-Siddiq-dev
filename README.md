@@ -75,7 +75,7 @@ No. Nobody can. Printers are not software, they are a curse.
 ### 🎲 Excuse of the day
 
 <!-- EXCUSE:START -->
-> "It's not broken, it's in a creative state."
+> "I can't reproduce it, so technically it doesn't exist."
 <!-- EXCUSE:END -->
 
 <sub>A fresh one every day, picked by a robot so I can't be blamed. Use responsibly.</sub>
